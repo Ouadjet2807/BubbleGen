@@ -1,0 +1,33 @@
+body {
+  overflow: hidden;
+  background-image: url("./sunset.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Permanent Marker";
+  cursor: crosshair;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(255, 166, 0, 0.6);
+  opacity: 0;
+  animation: anim 8s forwards;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(-220deg);
+  }
+}
+
+h3 {
+  font-size: 10rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(253, 253, 253, 0.555);
+}
